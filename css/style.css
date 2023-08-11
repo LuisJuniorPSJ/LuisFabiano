@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Navegação Inicio*/
+.navi {
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+.navi ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 3.5rem;
+  list-style: none;
+}
+
+.navi ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  text-shadow: 0px -1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.navi ul li a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.size-content {
+  width: 18px;
+  height: 18px;
+  margin-left: 0.2rem;
+}
+
+.menu-mobile-content {
+  display: none;
+}
+
+/*Navegação fim */
+
+/* Inicio header */
+.header-container-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10rem;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000;
+}
+
+.title {
+  width: 30%;
+  letter-spacing: 0.5rem;
+  font-size: 2.2rem;
+  color: white;
+}
+
+.title:after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca 0.7s infinite;
+}
+
+/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.img_edit {
+  width: 30%;
+  height: 30%;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  animation: rotate-i 1s ease-out;
+  object-fit: cover;
+  border: 1px solid white;
+}
+
+/* Fim do Header */
+
+/* Inicio section (1) */
+.section-content {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.content-text {
+  font-size: 1.8rem;
+  width: 60%;
+  letter-spacing: 2px;
+  transition-delay: 0.3s;
+  font-family: "Ubuntu", sans-serif;
+  text-align: left;
+  font-weight: bold;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  font-style: italic;
+}
+
+.content-tecs {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.content-tecs:nth-of-type(1) {
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+}
+
+.content-tecs img {
+  width: 40px;
+  height: 40px;
+}
+
+.gira {
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fim da section (1) */
+
+/* ------------Inicio da section (2) // Cards -------------------*/
+
+.projetos-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #000000;
+  width: 100%;
+  flex-direction: row;
+}
+
+.card-content {
+  width: 20%;
+  height: 50%;
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5px;
+  background-color: rgb(240, 235, 235);
+  transition-duration: 1s;
+  word-wrap: break-word;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px -1px 8px 1px rgba(255, 255, 255, 1);
+  object-fit: cover;
+}
+
+.card-content p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.img-respon {
+  padding: 8px 8px;
+  width: 100%;
+  height: 100%;
+}
+
+/*-------Inicio animação cards-------------------------------------*/
+.card-content span:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-image: linear-gradient(to right, transparent, rgb(0, 0, 0));
+  animation: animar1 1s linear infinite;
+}
+
+@keyframes animar1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.card-content span:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent, rgb(3, 3, 3));
+  animation: animar2 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animar2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.card-content span:nth-of-type(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
+  animation: animar3 1s linear infinite;
+}
+
+@keyframes animar3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.card-content span:nth-of-type(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-image: linear-gradient(to top, transparent, rgb(0, 0, 0));
+  animation: animar4 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animar4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* ------------------------Fim animação Cards ------------------------*/
+.btn50 {
+  text-decoration: none;
+  display: inline-block;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.btn50:hover {
+  opacity: 1;
+}
+
+.card-content img {
+  border-radius: 10%;
+}
+/* ------------Fim da section (2) // Cards -------------------*/
+
+/*----------- Inicio Footer -------*/
+footer {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.479);
+  font-weight: bolder;
+}
+/* -----------Fim do Footer------- */
+
+.content-text,
+.tecs,
+.card-content,
+.title,
+.img_edit {
+  visibility: hidden;
+}
