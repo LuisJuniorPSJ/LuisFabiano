@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +52,12 @@ a {
   margin-left: 0.2rem;
 }
 
-.menu-mobile-content {
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
   display: none;
 }
 
@@ -110,32 +118,33 @@ a {
   background-color: #000000;
   height: 100vh;
   width: 100%;
+  gap: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .content-text {
   font-size: 1.8rem;
-  background-color: rgba(255, 255, 255, 0.993);
-  width: 60%;
+  background: white;
+  width: 80%;
   letter-spacing: 1px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   text-align: left;
   font-weight: bolder;
   color: rgb(0, 0, 0);
-  border: 1px solid white;
-  border-radius: 59px 59px 59px 59px;
-  padding: 1.5rem;
+  border-radius: 9px 9px 9px 9px;
+  padding: 1rem;
   box-shadow: 0px 0px 7px 1px rgb(255, 255, 255);
 }
 
 .content-tecs {
+  width: 80%;
   display: flex;
   list-style: none;
-  gap: 1rem;
+  justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
 }
@@ -312,12 +321,11 @@ a {
 /* ------------Fim da section (2) // Cards -------------------*/
 
 /*----------- Inicio Footer -------*/
-footer {
-  background-color: #fffff3;
-  color: rgb(0, 0, 0);
+#footer-container {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 5px;
-  margin: 5px;
 }
 
 .footer-content {
@@ -328,26 +336,23 @@ footer {
 }
 
 .footer-content p {
-  margin: 0;
-  font-weight: bolder;
+  margin-left: 1rem;
+  letter-spacing: 0.2rem;
 }
 
 .social-links {
   list-style: none;
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+}
+
+.social-links li {
+  margin: 0.5rem;
 }
 
 .social-links-img {
   width: 32px;
   height: 32px;
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-  }
 }
 
 /* -----------Fim do Footer------- */
