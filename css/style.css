@@ -67,6 +67,7 @@ a {
 .header-container-content {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
   gap: 10rem;
