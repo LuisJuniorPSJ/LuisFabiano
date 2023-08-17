@@ -4,6 +4,8 @@ sr.reveal(".title", { rotate: { x: 0, y: 80, z: 0 }, duration: 1500 });
 
 sr.reveal(".img_edit", { rotate: { x: 180, y: 360, z: 0 }, duration: 1500 });
 
+sr.reveal(".my_profile", { rotate: { x: 180, y: 360, z: 0 }, duration: 1500 });
+
 sr.reveal(".content-text", { rotate: { x: 0, y: 80, z: 0 }, duration: 1500 });
 
 sr.reveal(".content-tecs", { rotate: { x: 0, y: 80, z: 0 }, duration: 1500 });
