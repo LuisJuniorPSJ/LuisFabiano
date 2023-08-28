@@ -23,9 +23,7 @@
   }
 
   .content-tecs {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
   }
   .content-tecs p {
     display: none;
