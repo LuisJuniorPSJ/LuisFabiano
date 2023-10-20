@@ -38,3 +38,7 @@ menuItems.forEach((item) => {
     mobileMenu.classList.remove("show");
   });
 });
+
+alert(
+  "Atenção recrutadores, estou aprimorando meu portfólio com novos projetos e atualizações, incluindo trabalhos que realizei para melhorá-lo."
+);
